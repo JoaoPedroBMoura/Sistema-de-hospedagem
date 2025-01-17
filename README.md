@@ -15,7 +15,29 @@ O seu programa deverá cálcular corretamente os valores dos métodos da classe 
 3. Caso seja feita uma reserva igual ou maior que 10 dias, deverá ser concedido um desconto de 10% no valor da diária.
 
 
-![Diagrama de classe estacionamento](diagrama_classe_hotel.png)
+![Diagrama de classe estacionamento](./img/diagrama_classe_hotel.png)
 
 ## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+1. Primeiro foi construido um menu interativo que permite acessar os métodos da aplicação:
+
+![Menu interativo](./img/menuPrincipal.png)
+
+2. O menu de checking faz uma breve entrevista com o usuário. Para fazer a reserva é necessário:
+    - Quantos dias ficaram hospedados ?
+    - Informar a suite que deseja ficar, que já abre um novo menu
+    - Cadastrar os hóspedes
+3. Esse é o menu da entrevista:
+
+![Menu de cadastro](./img/cadastroDeHospedes.png)
+
+4. O menu de cadastro nas suítes:
+
+![Menu das suites](./img/menuDeSuites.png)
+
+5. Funcionalidade de listar as reservas feitas no sistema
+
+![Listagem de hóspedes](./img/listagemDeReservas.png)
+
+6. Menu de checkout, para os hospedes irem para casa
+
+![Menu de checkout](./img/checkout.png)
