@@ -6,6 +6,8 @@ namespace DesafioProjetoHospedagem.Models
         public Suite Suite { get; set; }
         public int DiasReservados { get; set; }
 
+        public int IdReserva{ get; set;}
+
         public Reserva() { }
 
         public Reserva(int diasReservados)
@@ -55,6 +57,12 @@ namespace DesafioProjetoHospedagem.Models
             }
 
             return valor;
+        }
+    
+        public void ApresentaHóspedes(){
+            foreach(var hospede in Hospedes){
+                Console.WriteLine($"Hospede: {hospede.NomeCompleto}| Numero :{hospede.NumeroDeHospede}");
+            }
         }
     }
 }
