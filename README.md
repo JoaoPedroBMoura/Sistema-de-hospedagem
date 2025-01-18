@@ -26,13 +26,13 @@ O seu programa deverá cálcular corretamente os valores dos métodos da classe 
     - Quantos dias ficaram hospedados ?
     - Informar a suite que deseja ficar, que já abre um novo menu
     - Cadastrar os hóspedes
-3. Esse é o menu da entrevista:
-
-![Menu de cadastro](./img/cadastroDeHospedes.png)
-
-4. O menu de cadastro nas suítes:
+3. Essa é parte do menu de entrevista. Ele pergunta primeiro a quantidade de dias que ficará hospedado:
 
 ![Menu das suites](./img/menuDeSuites.png)
+
+4. Após escolher sua suite, cadastre os hóspedes:
+
+![Menu de cadastro](./img/cadastroDeHospedes.png)
 
 5. Funcionalidade de listar as reservas feitas no sistema
 
