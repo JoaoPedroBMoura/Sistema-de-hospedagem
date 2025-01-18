@@ -10,7 +10,7 @@ Console.WriteLine("Seja bem vindo ao Hotel BM !!");
 
 while (exibirMenu)
 {
-    Console.WriteLine("Digite a sua opção:");
+    Console.WriteLine("Oque deseja fazer ?");
     Console.WriteLine("1 - Fazer checking");
     Console.WriteLine("2 - Fazer checkout");
     Console.WriteLine("3 - Listar reservar");

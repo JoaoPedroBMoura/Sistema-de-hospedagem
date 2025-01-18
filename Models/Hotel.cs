@@ -30,10 +30,10 @@ namespace DesafioProjetoHospedagem.Models
             {
                 Pessoa hospede = new Pessoa();
 
-                    Console.WriteLine("Por favor informe o nome do novo hóspede");
+                    Console.WriteLine("\r\nPor favor informe o primeiro nome do novo hóspede");
                     var nome = Console.ReadLine();
 
-                    Console.WriteLine("Por favor infórme o sobrenome do novo hóspede");
+                    Console.WriteLine("Por favor informe o sobrenome do novo hóspede");
                     var sobrenome = Console.ReadLine();
 
                     hospede.Nome = nome;
@@ -41,11 +41,12 @@ namespace DesafioProjetoHospedagem.Models
                     hospede.NumeroDeHospede = idHospede;
 
                     hospedes.Add(hospede);
-                    Console.WriteLine("Hóspede cadastrado");
+                    Console.WriteLine("\r\nHóspede cadastrado");
 
                     idHospede++;
 
-                    Console.WriteLine("Deseja cadastrar um novo hóspede ? (1- Sim, 2- Não)");
+                    Console.WriteLine("\r\nDeseja cadastrar um novo hóspede ? (1- Sim, 2- Não)");
+    
                     if(Console.ReadLine() == "2"){
                         ativo = false;
                     }
@@ -62,18 +63,13 @@ namespace DesafioProjetoHospedagem.Models
 
             Reserva reserva = new Reserva();
 
-            Console.WriteLine("Quantos dias ficarão hospedados ?");
-            diasReservados = Convert.ToInt32(Console.ReadLine());
-
-            reserva.DiasReservados = diasReservados;
-
             Console.Clear();
-            Console.WriteLine("Qual suite você deseja ? \n");
+            Console.WriteLine("Qual suite você deseja ?");
             Console.WriteLine("Digite a sua opção:");
-            Console.WriteLine("1 - Viajante");
-            Console.WriteLine("2 - Família");
-            Console.WriteLine("3 - Black");
-            Console.WriteLine("4 - Premium");
+            Console.WriteLine("1 - Viajante | Diária 30 reais | 2 pessoas");
+            Console.WriteLine("2 - Família  | Diária 60 reais | 4 pessoas");
+            Console.WriteLine("3 - Black    | Diária 70 reais | 2 pessoas");
+            Console.WriteLine("4 - Premium  | Diária 100 reais| 2 pessoas");
 
             switch (Console.ReadLine())
             {
@@ -99,7 +95,14 @@ namespace DesafioProjetoHospedagem.Models
                     break;
             }
 
-            Console.WriteLine("Por favor cadastre os hóspedes");
+            Console.WriteLine("\r\nQuantos dias de hospedagem ?");
+            diasReservados = Convert.ToInt32(Console.ReadLine());
+
+            reserva.DiasReservados = diasReservados;
+
+            
+
+            Console.WriteLine("\r\nPor favor cadastre os hóspedes:\r\n");
 
             reserva.CadastrarHospedes(CadastrarHospede());
 
@@ -125,7 +128,7 @@ namespace DesafioProjetoHospedagem.Models
                 }
             }
 
-            Console.WriteLine("Qual o id da sua reserva ?");
+            Console.WriteLine("\r\nQual o id da sua reserva ?");
             idDaReserva = Convert.ToInt32(Console.ReadLine());
 
             indiceDaReserva = reservas.FindIndex(r => r.IdReserva == idDaReserva);
@@ -175,6 +178,7 @@ namespace DesafioProjetoHospedagem.Models
                     reservasLocais.ApresentaHóspedes();
                 }
 
+                Console.WriteLine("\r\nAperte enter para seguir");
                 Console.ReadLine();
             } else {
                 Console.WriteLine("Problema com a lista de hóspedes");
